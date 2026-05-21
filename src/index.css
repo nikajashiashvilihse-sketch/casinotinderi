@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Bebas Neue", sans-serif;
+
+  --color-background: #080808;
+  --color-card: #222222;
+  --color-foreground: #ffffff;
+  --color-primary: #BAFF00;
+  --color-primary-alt: #66FF03;
+  --color-muted-foreground: rgba(255, 255, 255, 0.6);
+  --color-border-custom: rgba(255, 255, 255, 0.08);
+  --color-card-border: rgba(186, 255, 0, 0.12);
+  --color-danger-custom: #FF4058;
+  --color-success-custom: #BAFF00;
+}
+
+/* Frosted Glass Custom Utility Classes */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08); /* frosted white border */
+}
+
+.glass-pill {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-gradient {
+  background: linear-gradient(180deg, rgba(34, 34, 34, 0.6) 0%, rgba(20, 20, 20, 0.85) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.neon-border {
+  border: 1px solid rgba(186, 255, 0, 0.15);
+}
+
+.neon-shadow {
+  box-shadow: 0 0 40px rgba(186, 255, 0, 0.06);
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #080808;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #BAFF00;
+}
+
+/* Custom glow effect */
+.glow-primary {
+  box-shadow: 0 0 20px rgba(186, 255, 0, 0.15);
+}
+
+.glow-primary-hover:hover {
+  box-shadow: 0 0 30px rgba(186, 255, 0, 0.3);
+}
+
+.glow-card-active {
+  box-shadow: 0 0 30px rgba(186, 255, 0, 0.2);
+}
+
+.glow-dot {
+  box-shadow: 0 0 12px #BAFF00;
+}
+
+/* Dynamic custom cursor style for desktops */
+@media (min-width: 1024px) {
+  .custom-cursor {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #BAFF00;
+    border-radius: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 9999;
+    transition: width 0.15s, height 0.15s, background-color 0.15s;
+    transition-timing-function: ease-out;
+  }
+}
